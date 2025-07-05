@@ -26,6 +26,8 @@ in
       make -j prefix=$out
     '';
 
+    passthru.shellPath = "/bin/schemesh";
+
     installPhase = ''
       mkdir -p $out/bin $out/lib/schemesh
 
